@@ -1,7 +1,12 @@
 import React, { useLayoutEffect, useEffect, useState } from 'react';
-import { Row, Col, Button, Divider } from 'antd';
-import {MenuFoldOutlined,PlusOutlined, EditOutlined, DeleteOutlined, ArrowLeftOutlined } from '@ant-design/icons';
-
+import { Row, Col, Button } from 'antd';
+import {
+  MenuFoldOutlined,
+  PlusOutlined,
+  EditOutlined,
+  DeleteOutlined,
+  ArrowLeftOutlined,
+} from '@ant-design/icons';
 
 import CreateForm from '@/components/CreateForm';
 import UpdateForm from '@/components/UpdateForm';
@@ -21,8 +26,8 @@ import CrudDataTable from './CrudDataTable';
 
 function SidePanelTopContent({ config, formElements }) {
   const { crudContextAction, state } = useCrudContext();
-  const { entityDisplayLabels, entity } = config;
-  const { panel, collapsedBox, modal, readBox, editBox } = crudContextAction;
+  const { entityDisplayLabels } = config;
+  const { modal, editBox } = crudContextAction;
 
   const { isReadBoxOpen, isEditBoxOpen } = state;
   const { result: currentItem } = useSelector(selectCurrentItem);

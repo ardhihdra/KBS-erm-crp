@@ -44,7 +44,7 @@ export default function AutoCompleteAsync({
   };
 
   useEffect(() => {
-    if (debouncedValue != '') {
+    if (debouncedValue !== '') {
       const options = {
         q: debouncedValue,
         fields: searchFields,
@@ -58,7 +58,7 @@ export default function AutoCompleteAsync({
   }, [debouncedValue]);
 
   const onSearch = (searchText) => {
-    if (searchText && searchText != '') {
+    if (searchText && searchText !== '') {
       isSearching.current = true;
       setSearching(true);
       setOptions([]);
