@@ -6,8 +6,6 @@ import { DashboardLayout } from '@/layout';
 import { request } from '@/request';
 import useFetch from '@/hooks/useFetch';
 
-import RecentTable from './components/RecentTable';
-
 import SummaryCard from './components/SummaryCard';
 import CustomerPreviewCard from './components/CustomerPreviewCard';
 import {
@@ -17,7 +15,7 @@ import {
   PRODUCTS3,
   PRODUCT_LIST,
   SUBPRODUCT_LIST,
-} from './dummy.data';
+} from '@/utils/dummy.data';
 
 const dataTableColumns = [
   {
@@ -110,14 +108,14 @@ export default function DashboardModule() {
     {
       result: {
         factory: 'KCN',
-        products: [PRODUCTS2[3], PRODUCTS2[0], PRODUCTS2[0], PRODUCTS3[1]],
+        products: [PRODUCTS2[3], PRODUCTS2[0], PRODUCTS2[2], PRODUCTS3[1]],
       },
       isLoading: paymentLoading,
       entity: 'KCN',
     },
   ];
 
-  const factoryCards = entityData.map((data, index) => {
+  const factoryCards = JSON.parse(JSON.stringify(entityData)).map((data, index) => {
     const { result, entity, isLoading } = data;
 
     if (entity === 'offer') return null;
@@ -145,32 +143,10 @@ export default function DashboardModule() {
         tagColor={'green'}
         isLoading={isLoading}
         tagContents={result.products}
+        url={`/inventory/factory?f=${result.factory}`}
       />
     );
   });
-
-  const statisticCards = <></>;
-  // entityData.map((data, index) => {
-  //   const { result, entity, isLoading } = data;
-
-  //   if (entity === 'payment') return null;
-
-  //   return (
-  //     <PreviewCard
-  //       key={index}
-  //       title={`${data?.entity.charAt(0).toUpperCase() + data?.entity.slice(1)} Preview`}
-  //       isLoading={isLoading}
-  //       statistics={
-  //         !isLoading &&
-  //         result?.performance?.map((item) => ({
-  //           tag: item?.status,
-  //           color: 'blue',
-  //           value: item?.percentage,
-  //         }))
-  //       }
-  //     />
-  //   );
-  // });
 
   return (
     <DashboardLayout>
@@ -275,43 +251,6 @@ export default function DashboardModule() {
       </div>
       <Row gutter={[24, 24]}>{factoryCards}</Row>
       <div className="space30"></div>
-      <Row gutter={[24, 24]}>
-        <Col className="gutter-row" sm={{ span: 24 }} md={{ span: 24 }} lg={{ span: 18 }}>
-          <div className="whiteBox shadow" style={{ minHeight: '380px', height: '100%' }}>
-            <Row className="pad10" gutter={[0, 0]}>
-              {statisticCards}
-            </Row>
-          </div>
-        </Col>
-        <Col className="gutter-row" sm={{ span: 24 }} md={{ span: 24 }} lg={{ span: 6 }}>
-          <CustomerPreviewCard
-            isLoading={clientLoading}
-            activeCustomer={clientResult?.active}
-            newCustomer={clientResult?.new}
-          />
-        </Col>
-      </Row>
-      <div className="space30"></div>
-      <Row gutter={[24, 24]}>
-        <Col className="gutter-row" sm={{ span: 24 }} md={{ span: 12 }}>
-          <div className="whiteBox shadow">
-            <div className="pad20">
-              <h3 style={{ color: '#22075e', marginBottom: 5 }}>Recent Invoices</h3>
-            </div>
-
-            <RecentTable entity={'invoice'} dataTableColumns={dataTableColumns} />
-          </div>
-        </Col>
-
-        <Col className="gutter-row" sm={{ span: 24 }} md={{ span: 12 }}>
-          <div className="whiteBox shadow">
-            <div className="pad20">
-              <h3 style={{ color: '#22075e', marginBottom: 5 }}>Recent Quotes</h3>
-            </div>
-            <RecentTable entity={'quote'} dataTableColumns={dataTableColumns} />
-          </div>
-        </Col>
-      </Row>
     </DashboardLayout>
   );
 }

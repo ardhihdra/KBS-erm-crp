@@ -2,6 +2,9 @@ const mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
 
 const invoiceSchema = new mongoose.Schema({
+  code: {
+    type: String,
+  },
   removed: {
     type: Boolean,
     default: false,
@@ -58,6 +61,9 @@ const invoiceSchema = new mongoose.Schema({
   taxRate: {
     type: Number,
     default: 0,
+  },
+  exchangeRate: {
+    type: Number,
   },
   subTotal: {
     type: Number,

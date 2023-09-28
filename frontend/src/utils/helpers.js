@@ -1,8 +1,8 @@
-import { parse } from 'querystring';
+// import { parse } from 'querystring';
 import dayjs from 'dayjs';
-function getPageQuery() {
-  parse(window.location.href.split('?')[1]);
-}
+// function getPageQuery() {
+//   parse(window.location.href.split('?')[1]);
+// }
 
 /* 
  To get nested object properties.
@@ -163,7 +163,7 @@ export function bindValue(obj, parentElement) {
 
 export const LOCAL_DATE_OPTIONS = {
   year: 'numeric',
-  month: 'long',
+  month: 'short',
   day: 'numeric',
   timeZone: 'Asia/Jakarta',
 };
@@ -181,4 +181,4 @@ export const dateToLocale = (dateString, country = 'id-ID') => {
   return new Date(dateString).toLocaleDateString(country, LOCAL_DATE_OPTIONS);
 };
 
-export default getPageQuery;
+// export default getPageQuery;

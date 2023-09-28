@@ -40,6 +40,10 @@ export const routesConfig = [
     component: 'InvoiceDashboard',
   },
   {
+    path: '/inventory/factory',
+    component: 'Inventory/FactoryInventory',
+  },
+  {
     path: '/inventory',
     component: 'Inventory/index',
   },

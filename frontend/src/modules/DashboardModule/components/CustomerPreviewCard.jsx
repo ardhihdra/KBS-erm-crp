@@ -16,7 +16,7 @@ export default function CustomerPreviewCard({
             justifyContent: 'center',
           }}
         >
-          <h3 style={{ color: '#22075e', marginBottom: 30 }}>Customer Preview</h3>
+          <h3 style={{ color: '#22075e', marginBottom: 30 }}>Sales Preview</h3>
 
           {isLoading ? (
             <Spin />
@@ -28,10 +28,10 @@ export default function CustomerPreviewCard({
               }}
             >
               <Progress type="dashboard" percent={newCustomer} width={148} />
-              <p>New Customer this Month</p>
+              <p>Increasing Sales this Month</p>
               <Divider />
               <Statistic
-                title="Active Customer"
+                title="Increasing Sales"
                 value={activeCustomer}
                 precision={2}
                 valueStyle={
