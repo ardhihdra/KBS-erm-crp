@@ -1,0 +1,38 @@
+[
+  {
+    "settingKey": "companyName",
+    "settingValue": "PT. Garut Bay Seafood",
+    "valueType": "string",
+    "isCoreSetting": true
+  },
+  {
+    "settingKey": "companyAddress",
+    "settingValue": "25 , Sulawesi Selatan de G , Oran 31009 ",
+    "valueType": "string",
+    "isCoreSetting": true
+  },
+  {
+    "settingKey": "companyCountry",
+    "settingValue": "Indonesia",
+    "valueType": "string",
+    "isCoreSetting": true
+  },
+  {
+    "settingKey": "companyTaxNumber",
+    "settingValue": "91231255234",
+    "valueType": "string",
+    "isCoreSetting": true
+  },
+  {
+    "settingKey": "companyVatNumber",
+    "settingValue": "91231255234",
+    "valueType": "string",
+    "isCoreSetting": true
+  },
+  {
+    "settingKey": "companyRegNumber",
+    "settingValue": "00001231421",
+    "valueType": "string",
+    "isCoreSetting": true
+  }
+]

@@ -1,0 +1,15 @@
+[
+  { name: 'COLOSSAL', removed: false, enabled: true },
+  { name: 'JUMBO', removed: false, enabled: true },
+  { name: 'JUMBO 32-41', removed: false, enabled: true },
+  { name: 'JUS', removed: false, enabled: true },
+  { name: 'BROKEN JUMBO', removed: false, enabled: true },
+  { name: 'BACKFIN', removed: false, enabled: true },
+  { name: 'FLOWER', removed: false, enabled: true },
+  { name: 'REGULAR BESAR', removed: false, enabled: true },
+  { name: 'REGULER KECIL', removed: false, enabled: true },
+  { name: 'CLAW MEAT', removed: false, enabled: true },
+  { name: 'MERUS', removed: false, enabled: true },
+  { name: 'CARPUS', removed: false, enabled: true },
+  { name: 'CLAW FINGER', removed: false, enabled: true },
+];
