@@ -9,9 +9,7 @@
     
   [www.idurarapp.com/open-source-erp-crm/](https://www.idurarapp.com/open-source-erp-crm/)
 
-
-
-IDURAR is Open Source ERP / CRM (Invoice / Inventory / Accounting / HR) Based on Advanced Mern Stack (Node.js / Express.js / MongoDb / React.js ) with Ant Design (AntD) and Redux
+IDURAR is Open Source ERP / CRM (Invoice / Inventory / Accounting / HR) Based on Advanced Mern Stack (Node.js / Express.js / MongoDb / React.js ) with Ant Design (AntD) and Redux.
 
 </div>
 
@@ -179,3 +177,5 @@ By contributing to IDURAR, you will be agreeing that your contributions will be 
 ## Show your support
 
 Dont forget to give a ⭐️ to this project ... Happy coding!
+
+--don't forget to setup mongodb--
