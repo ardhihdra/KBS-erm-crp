@@ -1,8 +1,7 @@
 import uniqueId from '@/utils/uinqueId';
-import { PlusOutlined, SyncOutlined } from '@ant-design/icons';
+import { SyncOutlined } from '@ant-design/icons';
 import { Button, Divider, Form, Input, InputNumber, PageHeader } from 'antd';
 import SetingsSection from './components/SetingsSection';
-import Currency from '../Currency';
 import SelectCurrency from './components/SelectCurrency';
 
 export default function PaymentSettings() {

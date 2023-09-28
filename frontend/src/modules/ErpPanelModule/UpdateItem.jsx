@@ -52,6 +52,7 @@ export default function UpdateItem({ config, UpdateForm }) {
             subTotal = calculate.add(subTotal, total);
           }
         }
+        return item;
       });
       setSubTotal(subTotal);
     }

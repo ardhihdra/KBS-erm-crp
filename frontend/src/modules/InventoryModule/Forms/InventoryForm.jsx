@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import dayjs from 'dayjs';
-import { Form, Input, InputNumber, Button, Select, Divider, Row, Col } from 'antd';
+import { Form, Input, Button, Select, Divider, Row, Col } from 'antd';
 
 import { PlusOutlined } from '@ant-design/icons';
 
@@ -18,7 +18,7 @@ export default function InventoryForm({ subTotal = 0, current = null }) {
   const [total, setTotal] = useState(0);
   const [taxRate, setTaxRate] = useState(0);
   const [taxTotal, setTaxTotal] = useState(0);
-  const [currentYear, setCurrentYear] = useState(() => new Date().getFullYear());
+  // const [currentYear, setCurrentYear] = useState(() => new Date().getFullYear());
   const handelTaxChange = (value) => {
     setTaxRate(value);
   };
@@ -27,7 +27,8 @@ export default function InventoryForm({ subTotal = 0, current = null }) {
     if (current) {
       const { taxRate = 0, year } = current;
       setTaxRate(taxRate);
-      setCurrentYear(year);
+      console.log(year);
+      // setCurrentYear(year);
     }
   }, [current]);
   useEffect(() => {

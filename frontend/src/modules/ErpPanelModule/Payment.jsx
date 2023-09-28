@@ -4,7 +4,7 @@ import { Divider } from 'antd';
 import { Button, PageHeader, Row, Col, Descriptions, Tag } from 'antd';
 import { FileTextOutlined, CloseCircleOutlined } from '@ant-design/icons';
 
-import { useErpContext } from '@/context/erp';
+// import { useErpContext } from '@/context/erp';
 import uniqueId from '@/utils/uinqueId';
 
 import { useMoney } from '@/settings';
@@ -15,9 +15,8 @@ import history from '@/utils/history';
 export default function Payment({ config, currentItem }) {
   const { entity, ENTITY_NAME } = config;
 
-  const { erpContextAction } = useErpContext();
+  // const { erpContextAction } = useErpContext();
 
-  const { readPanel, recordPanel } = erpContextAction;
   const money = useMoney();
 
   const [itemslist, setItemsList] = useState([]);

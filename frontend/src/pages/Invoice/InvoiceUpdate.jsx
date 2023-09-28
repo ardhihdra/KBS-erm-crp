@@ -7,7 +7,7 @@ export default function InvoiceUpdate() {
   };
   const config = {
     ...configPage,
-    //customConfig,
+    customConfig,
   };
   return <UpdateInvoiceModule config={config} />;
 }

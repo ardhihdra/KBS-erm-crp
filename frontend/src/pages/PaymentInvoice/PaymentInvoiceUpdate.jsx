@@ -7,7 +7,7 @@ export default function PaymentInvoiceUpdate() {
   };
   const config = {
     ...configPage,
-    //customConfig,
+    customConfig,
   };
   return <UpdatePaymentInvoiceModule config={config} />;
 }

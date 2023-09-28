@@ -7,7 +7,7 @@ export default function QuoteUpdate() {
   };
   const config = {
     ...configPage,
-    //customConfig,
+    customConfig,
   };
   return <UpdateQuoteModule config={config} />;
 }

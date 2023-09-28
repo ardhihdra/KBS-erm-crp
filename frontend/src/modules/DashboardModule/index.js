@@ -9,7 +9,6 @@ import useFetch from '@/hooks/useFetch';
 import RecentTable from './components/RecentTable';
 
 import SummaryCard from './components/SummaryCard';
-import PreviewCard from './components/PreviewCard';
 import CustomerPreviewCard from './components/CustomerPreviewCard';
 import {
   FACTORY_LIST,
@@ -47,7 +46,7 @@ const dataTableColumns = [
   },
 ];
 
-function formatCurrency(value) {
+export function formatCurrency(value) {
   return `$ ${value}`.replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
 }
 

@@ -1,17 +1,17 @@
-import React, { useEffect, useCallback } from 'react';
-import { Button, Result } from 'antd';
+import React, { useCallback, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { logout as logoutAction } from '@/redux/auth/actions';
 import PageLoader from '@/components/PageLoader';
-
 const Logout = () => {
   const dispatch = useDispatch();
-  function asyncLogout() {
+
+  const asyncLogout = useCallback(() => {
     return dispatch(logoutAction());
-  }
+  }, [dispatch]);
+
   useEffect(() => {
     asyncLogout();
-  }, []);
+  }, [asyncLogout]);
 
   return <PageLoader />;
 };

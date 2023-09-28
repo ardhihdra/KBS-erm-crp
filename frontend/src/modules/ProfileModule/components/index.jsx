@@ -1,4 +1,4 @@
-import React, { useLayoutEffect } from 'react';
+import React from 'react';
 
 import { useProfileContext } from '@/context/profileContext';
 import AdminInfo from './AdminInfo';

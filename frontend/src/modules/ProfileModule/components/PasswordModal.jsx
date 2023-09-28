@@ -1,11 +1,11 @@
 import { useProfileContext } from '@/context/profileContext';
-import { Button, Form, Input, Modal } from 'antd';
+import { Form, Input, Modal } from 'antd';
 import React from 'react';
 
 const PasswordModal = () => {
   const { state, profileContextAction } = useProfileContext();
-  const { modal, updatePanel } = profileContextAction;
-  const { update, read, passwordModal } = state;
+  const { modal } = profileContextAction;
+  const { passwordModal } = state;
   const modalTitle = 'Update password';
 
   const handelSubmit = (fieldsValue) => {

@@ -4,13 +4,7 @@ import { Dropdown, Menu, Table } from 'antd';
 import { request } from '@/request';
 import useFetch from '@/hooks/useFetch';
 
-import {
-  EllipsisOutlined,
-  EyeOutlined,
-  EditOutlined,
-  DeleteOutlined,
-  FilePdfOutlined,
-} from '@ant-design/icons';
+import { EllipsisOutlined, EyeOutlined, EditOutlined, FilePdfOutlined } from '@ant-design/icons';
 import { useHistory } from 'react-router-dom';
 import { DOWNLOAD_BASE_URL } from '@/config/serverApiConfig';
 

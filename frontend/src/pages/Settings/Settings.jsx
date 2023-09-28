@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
-import { Menu, Tabs, Button, Divider } from 'antd';
+import { useState } from 'react';
+import { Button } from 'antd';
 import { SettingsLayout } from '@/layout';
 
 import GeneralSettings from './GeneralSettings';
@@ -14,7 +14,7 @@ const RightMenu = ({ activeTab, handleTabChange }) => {
   ];
   const menuList = menuItems.map((item, index) => (
     <Button
-      type={item.key == activeTab ? 'default' : 'text'}
+      type={item.key === activeTab ? 'default' : 'text'}
       key={item.key}
       style={{ marginBottom: '10px' }}
       block

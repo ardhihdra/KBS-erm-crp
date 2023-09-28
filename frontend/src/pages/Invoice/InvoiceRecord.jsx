@@ -7,7 +7,7 @@ export default function InvoiceRecord() {
   };
   const config = {
     ...configPage,
-    //customConfig,
+    customConfig,
   };
   return <RecordInvoiceModule config={config} />;
 }

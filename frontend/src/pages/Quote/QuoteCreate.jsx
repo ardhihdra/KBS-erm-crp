@@ -6,7 +6,7 @@ const customConfig = {
 };
 const config = {
   ...configPage,
-  //customConfig,
+  customConfig,
 };
 
 export default function QuoteCreate() {

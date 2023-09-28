@@ -7,7 +7,7 @@ export default function InvoiceRead() {
   };
   const config = {
     ...configPage,
-    //customConfig,
+    customConfig,
   };
   return <ReadInvoiceModule config={config} />;
 }

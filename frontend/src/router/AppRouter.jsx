@@ -9,7 +9,7 @@ import { routesConfig } from './RoutesConfig';
 const Logout = lazy(() => import(/*webpackChunkName:'LogoutPage'*/ '@/pages/Logout'));
 const NotFound = lazy(() => import(/*webpackChunkName:'NotFoundPage'*/ '@/pages/NotFound'));
 
-const SubMenuRouter = ({ subMenuRouter }) => {
+export const SubMenuRouter = ({ subMenuRouter }) => {
   subMenuRouter.map((subMenu) => {
     console.log('🚀 ~ file: AppRouter.jsx ~ line 25 ~ routeItem.hasSubMenu.map ~ subMenu', subMenu);
 

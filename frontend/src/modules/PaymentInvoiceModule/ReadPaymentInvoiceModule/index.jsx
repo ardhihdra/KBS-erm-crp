@@ -4,13 +4,12 @@ import ReadItem from '@/modules/ErpPanelModule/ReadItem';
 import PageLoader from '@/components/PageLoader';
 import { erp } from '@/redux/erp/actions';
 import { selectItemById, selectCurrentItem } from '@/redux/erp/selectors';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { useParams, useHistory } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
 export default function ReadPaymentInvoiceModule({ config }) {
   const dispatch = useDispatch();
-  const history = useHistory();
   const { id } = useParams();
   let item = useSelector(selectItemById(id));
 

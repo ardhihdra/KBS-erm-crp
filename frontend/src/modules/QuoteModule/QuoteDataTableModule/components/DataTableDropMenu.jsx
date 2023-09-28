@@ -1,12 +1,6 @@
 import { Menu } from 'antd';
 
-import {
-  EyeOutlined,
-  EditOutlined,
-  DeleteOutlined,
-  FilePdfOutlined,
-  CreditCardOutlined,
-} from '@ant-design/icons';
+import { EyeOutlined, EditOutlined, DeleteOutlined, FilePdfOutlined } from '@ant-design/icons';
 import { useSelector, useDispatch } from 'react-redux';
 import { erp } from '@/redux/erp/actions';
 import { selectItemById } from '@/redux/erp/selectors';
@@ -20,7 +14,7 @@ export default function DataTableDropMenu({ row, entity }) {
   const dispatch = useDispatch();
   const history = useHistory();
   const { erpContextAction } = useErpContext();
-  const { recordPanel, modal } = erpContextAction;
+  const { modal } = erpContextAction;
   const item = useSelector(selectItemById(row._id));
   function Read() {
     dispatch(erp.currentItem({ data: item }));

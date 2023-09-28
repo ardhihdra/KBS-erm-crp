@@ -7,7 +7,7 @@ export default function QuoteRead() {
   };
   const config = {
     ...configPage,
-    //customConfig,
+    customConfig,
   };
   return <ReadQuoteModule config={config} />;
 }
