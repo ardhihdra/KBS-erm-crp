@@ -74,7 +74,7 @@ const dataTableColumns = [
   },
 ];
 
-export default function DashboardModule() {
+export default function FactoryInventory() {
   const { result: invoiceResult, isLoading: invoiceLoading } = useFetch(() =>
     request.summary({ entity: 'invoice' })
   );
@@ -170,6 +170,7 @@ export default function DashboardModule() {
 
   return (
     <DashboardLayout>
+      <h2>{factoryParam} Performance</h2>
       <div
         className="shadow"
         style={{

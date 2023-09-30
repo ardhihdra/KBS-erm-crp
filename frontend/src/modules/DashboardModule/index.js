@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Tag, Row, Col, Select } from 'antd';
+import { Tag, Row, Col, Select, Switch } from 'antd';
 
 import { DashboardLayout } from '@/layout';
 
@@ -71,47 +71,48 @@ export default function DashboardModule() {
   const [productsFilter, setProductsFilter] = useState([]);
   const [subProductsFilter, setSubProductsFilter] = useState([]);
   const [factoriesFilter, setFactoriesFilter] = useState([]);
+  const [isToday, setIsToday] = useState(true);
 
   const entityData = [
     {
       result: {
-        factory: 'JCL',
+        factory: 'JCI',
         products: PRODUCTS1,
       },
       isLoading: invoiceLoading,
-      entity: 'JCL',
+      entity: 'JCI',
     },
     {
       result: {
-        factory: 'KBS',
+        factory: 'CMB',
         products: PRODUCTS2,
       },
       isLoading: quoteLoading,
-      entity: 'KBS',
+      entity: 'CMB',
     },
     {
       result: {
-        factory: 'LBS-L',
+        factory: 'DAMENA',
         products: PRODUCTS3,
       },
       isLoading: offerLoading,
-      entity: 'LBL-L',
+      entity: 'DAMENA',
     },
     {
       result: {
-        factory: 'LBS',
+        factory: 'BMI - L',
         products: [PRODUCTS2[1], PRODUCTS2[2], PRODUCTS2[3], PRODUCTS3[0]],
       },
       isLoading: paymentLoading,
-      entity: 'LBL',
+      entity: 'BMI - L',
     },
     {
       result: {
-        factory: 'KCN',
+        factory: 'KCN - C',
         products: [PRODUCTS2[3], PRODUCTS2[0], PRODUCTS2[2], PRODUCTS3[1]],
       },
       isLoading: paymentLoading,
-      entity: 'KCN',
+      entity: 'KCN - C',
     },
   ];
 
@@ -161,6 +162,16 @@ export default function DashboardModule() {
           border: 'solid 1px #d6e4ff',
         }}
       >
+        <div style={{ minWidth: '80px' }}>
+          <h4 style={{ marginBottom: 4, textTransform: 'capitalize' }}>Range</h4>
+          <Switch
+            checked={isToday}
+            onChange={(checked) => setIsToday(checked)}
+            checkedChildren="Today"
+            unCheckedChildren="Weekly"
+            style={{ backgroundColor: isToday ? null : 'violet', marginTop: '4px' }}
+          />
+        </div>
         <div>
           <h4 style={{ marginBottom: 4, textTransform: 'capitalize' }}>Factory</h4>
           <Select

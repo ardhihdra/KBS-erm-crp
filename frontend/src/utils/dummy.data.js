@@ -18,7 +18,7 @@ export const SUBPRODUCT_LIST = [
   'CLAW FINGER',
 ];
 
-export const FACTORY_LIST = ['JCL', 'KBS', 'LBL-L', 'LBL', 'KCN'];
+export const FACTORY_LIST = ['JCI', 'CMB', 'DAMENA', 'BMI - L', 'KCN - C'];
 
 export const CHART_DUMMY = [
   {
@@ -180,12 +180,12 @@ export const PRODUCTS1 = [
   {
     name: 'Weiss',
     buyer: 'DSA',
-    unit: 'cup',
+    unit: 'cup16',
     subProducts: [
       {
         name: 'Backfin',
         total: 90,
-        unit: 'cup',
+        unit: 'cup16',
       },
     ],
   },
@@ -211,14 +211,14 @@ export const PRODUCTS2 = [
     ],
   },
   {
-    name: 'Krogen',
+    name: 'Kroger',
     buyer: 'DSA',
-    unit: 'cup',
+    unit: 'cup8',
     subProducts: [
       {
         name: 'Jumbo Lump',
         total: 10,
-        unit: 'cup',
+        unit: 'cup8',
       },
     ],
   },
@@ -238,39 +238,39 @@ export const PRODUCTS2 = [
   {
     name: 'More Please',
     buyer: 'DSA',
-    unit: 'cup',
+    unit: 'cup8',
     subProducts: [
       {
         name: 'Lump',
         total: 120,
-        unit: 'cup',
+        unit: 'cup8',
       },
       {
         name: 'Backfin',
         total: 20,
-        unit: 'cup',
+        unit: 'cup8',
       },
       {
         name: 'Special',
         total: 40,
-        unit: 'cup',
+        unit: 'cup8',
       },
     ],
   },
   {
     name: 'Weiss',
     buyer: 'DSA',
-    unit: 'cup',
+    unit: 'cup16',
     subProducts: [
       {
         name: 'Backfin',
         total: 90,
-        unit: 'cup',
+        unit: 'cup16',
       },
       {
         name: 'Special',
         total: 80,
-        unit: 'cup',
+        unit: 'cup16',
       },
     ],
   },
@@ -300,24 +300,24 @@ export const PRODUCTS3 = [
     ],
   },
   {
-    name: 'Krogen',
+    name: 'Kroger',
     buyer: 'DSA',
-    unit: 'cup',
+    unit: 'cup8',
     subProducts: [
       {
         name: 'Jumbo Lump',
         total: 120,
-        unit: 'cup',
+        unit: 'cup8',
       },
       {
         name: 'Backfin',
         total: 26,
-        unit: 'cup',
+        unit: 'cup8',
       },
       {
         name: 'Special',
         total: 40,
-        unit: 'cup',
+        unit: 'cup8',
       },
     ],
   },
