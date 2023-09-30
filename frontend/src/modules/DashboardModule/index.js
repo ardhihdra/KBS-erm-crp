@@ -16,6 +16,7 @@ import {
   PRODUCT_LIST,
   SUBPRODUCT_LIST,
 } from '@/utils/dummy.data';
+import WeeklyTransaction from './components/WeeklyTransaction';
 
 const dataTableColumns = [
   {
@@ -252,15 +253,27 @@ export default function DashboardModule() {
         </div>
       </div>
 
-      <div
-        className="pad15 strong"
-        style={{ textAlign: 'center', justifyContent: 'center', marginTop: '2rem' }}
-      >
-        <h3 style={{ color: '#22075e', marginBottom: 0, textTransform: 'capitalize' }}>
-          Inventory
-        </h3>
-      </div>
-      <Row gutter={[24, 24]}>{factoryCards}</Row>
+      {isToday ? (
+        <>
+          <div
+            className="pad15 strong"
+            style={{ textAlign: 'center', justifyContent: 'center', marginTop: '2rem' }}
+          >
+            <h3 style={{ color: '#22075e', marginBottom: 0, textTransform: 'capitalize' }}>
+              Inventory
+            </h3>
+          </div>
+          <Row gutter={[24, 24]}>{factoryCards}</Row>
+        </>
+      ) : (
+        <>
+          <WeeklyTransaction
+            factoriesFilter={factoriesFilter}
+            productsFilter={productsFilter}
+            subProductsFilter={subProductsFilter}
+          />
+        </>
+      )}
       <div className="space30"></div>
     </DashboardLayout>
   );

@@ -7,17 +7,8 @@ import { DashboardLayout } from '@/layout';
 import { request } from '@/request';
 import useFetch from '@/hooks/useFetch';
 
-import SummaryCard from '@/modules/DashboardModule/components/SummaryCard';
 import CustomerPreviewCard from '@/modules/DashboardModule/components/CustomerPreviewCard';
-import {
-  CHART_DUMMY,
-  FACTORY_LIST,
-  PRODUCTS1,
-  PRODUCTS2,
-  PRODUCTS3,
-  PRODUCT_LIST,
-  SUBPRODUCT_LIST,
-} from '@/utils/dummy.data';
+import { CHART_DUMMY, PRODUCT_LIST, SUBPRODUCT_LIST } from '@/utils/dummy.data';
 import { Chart } from 'chart.js/auto';
 import { dateToLocale } from '@/utils/helpers';
 import RecentTable from '@/components/RecentTable';

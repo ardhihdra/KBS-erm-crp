@@ -339,3 +339,38 @@ export const PRODUCTS3 = [
     ],
   },
 ];
+
+const COLORS = [
+  '#ff4d4f',
+  '#1890ff',
+  '#52c41a',
+  '#fadb14',
+  '#fa8c16',
+  '#722ed1',
+  '#eb2f96',
+  '#8c8c8c',
+  '#000000',
+  '#ffffff',
+  '#13c2c2',
+  '#eb2f96',
+  '#a0d911',
+  '#1890ff',
+  '#2f54eb',
+  '#722ed1',
+  '#9254de',
+  '#faad14',
+  '#d9d9d9',
+  '#ad8b00',
+];
+
+export const STACKED_BAR_CHART = {
+  labels: FACTORY_LIST,
+  datasets: SUBPRODUCT_LIST.map((sl, idx) => {
+    return {
+      label: sl,
+      data: FACTORY_LIST.map(() => Math.floor(Math.random() * 101)),
+      backgroundColor: COLORS[idx],
+      borderWidth: 1,
+    };
+  }),
+};
